@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <title>My Portfolio</title>
+    <style>
+        body {
+            font-family: "Audiowide", sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .navbar {
+            background-color: rgb(152, 111, 218);
+            overflow: hidden;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            position: relative;
+            overflow: hidden;
+            transition: color 0.4s;
+        }
+
+        .navbar a::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            bottom: 0;
+            left: 0;
+            background-color: white;
+            transform: translateY(100%);
+            transition: transform 0.4s;
+        }
+
+        .navbar a:hover::before {
+            transform: translateY(0);
+        }
+
+        .navbar a:hover {
+            color: #3d3d3d;
+        }
+
+        #rcorners2 {
+            border-radius: 25px;
+            border: 5px solid rgb(152, 111, 218);
+            padding: 20px;
+            width: auto;
+            height: auto;
+            box-sizing: border-box;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+
+        }
+
+        .main-title {
+            background-color: #3d3d3d;
+            min-height: 30vh;
+            padding: 60px;
+            text-align: left;
+        }
+
+        .main-title h1 {
+            font-size: 50px;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .main-title p {
+            color: rgb(194, 194, 194)
+        }
+
+        .project-section {
+            display: flex;
+            align-items: center;
+            margin: 20px;
+            padding: 20px;
+            background-color: rgb(217, 201, 243);
+            border-radius: 8px;
+        }
+
+        .project-image {
+            width: 200px;
+            height: auto;
+            margin-right: 20px;
+            border-radius: 8px;
+        }
+
+        .project-content {
+            flex: 1;
+        }
+
+        .project-content h2 {
+            margin-top: 0;
+            color: #3d3d3d;
+        }
+
+        .project-content p {
+            color: #3d3d3d;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: medium;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="navbar">
+        <a href="Homepage.html">Home</a>
+        <a href="Aboutme.html">About Me</a>
+        <a href="ProjectBlog.html">Projects</a>
+    </div>
+
+    <div class="main-title">
+        <h1>About Me </h1>
+    </div>
+    <div class="project-section">
+        <img src="path_to_your_image.jpg" alt="Project Image" class="project-image">
+        <div class="project-content">
+            <h2>Biography</h2>
+            <p> My name is Laura Mullings, or if you are a mandarin speaker, my name is 嘉丽. I am 20 years old, and I
+                have always had a deep interest and passion for AI and software. I have always had an ambition to
+                inspire those around me and prove to myself over and over that I am capable. I enjoy working with others
+                and every person I meet whether through good circumstances or bad will always be a blessing in my life.
+                There is a deep significance to me to representing my cultures and also representing my best self for
+                others. I want to thank you for your time, thank you for taking a moment to get to know a little more
+                about me and my background, although it is never mandatory.
+            </p>
+            <p> I had my introduction to Computer Science and Software Engineering at age 12 when I made my very first
+                game. Since then I have taken a deep interest in machine learning and designing neural netowrks. I have
+                researched countless ways to do image recognition, natural language processing and I have recently
+                gotten
+                into prompt engineering for some of my for-fun projects (not yet listed). To me, computer science is a
+                way to express
+                creativity within the applications of solving problems to serve humanity. It is always important to me
+                that everything I do is executed well, efficiently and by the ethical standards thatt all software
+                developers should adhere to. As the industry continues to change, so will I. I enjoy the newest
+                developments and I hope to find myself caught up fully in due time. </p>
+        </div>
+    </div>
+
+</body>
+
+</html>
