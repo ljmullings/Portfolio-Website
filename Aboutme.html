@@ -17,6 +17,9 @@
         .navbar {
             background-color: rgb(152, 111, 218);
             overflow: hidden;
+            position: sticky;
+            top: 0;
+            z-index: 10;
         }
 
         .navbar a {
@@ -63,7 +66,7 @@
         }
 
         .main-title {
-            background-color: #3d3d3d;
+            background-color: #252525;
             min-height: 30vh;
             padding: 60px;
             text-align: left;
@@ -109,6 +112,41 @@
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
             font-size: medium;
         }
+
+        input[type=email],
+        textarea {
+            width: 90%;
+            padding: 12px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 5px solid #252525;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        button[type=submit] {
+            align-items: center;
+            width: 90%;
+            background-color: #5d64c4;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button[type=submit]:hover {
+            background-color: #8eaadf;
+        }
+
+        #confirmation {
+            margin-top: 15px;
+            color: green;
+            font-size: 18px;
+        }
     </style>
 </head>
 
@@ -127,9 +165,48 @@
         <img src="path_to_your_image.jpg" alt="Project Image" class="project-image">
         <div class="project-content">
             <h2>Biography</h2>
-            <p> My info goes here! </p>
+            <p> My name is Laura Mullings, also known as 嘉丽 in Mandarin. At the age of 20, I possess a profound passion
+                for AI and software development, coupled with a relentless drive to inspire and continually prove my
+                capabilities to myself and others. My collaborative nature ensures that every interaction, regardless of
+                its nature, enriches my journey. I hold the representation of my cultural heritage and the portrayal of
+                my best self to others in high regard. I appreciate your time and interest in learning about my
+                background.</p>
+            <p> My journey in Computer Science and Software Engineering commenced at the age of 12 with the
+                creation of my first game. This milestone sparked an enduring fascination with machine learning and
+                neural network design. My academic pursuits have led me to explore various facets of AI, including image
+                recognition and natural language processing. Recently, my foray into prompt engineering has marked a new
+                chapter in my personal projects, a testament to my ongoing quest for knowledge and innovation. </p>
+            <p> I perceive computer science not just as a field of study, but as a canvas for creativity and
+                problem-solving aimed at benefiting humanity. My commitment to excellence, efficiency, and adherence to
+                ethical standards in software development is unwavering. As the industry evolves, I am committed to
+                adapting and immersing myself in the latest advancements. My goal is to remain at the forefront of
+                technological innovation, continually expanding my skill set and contributing meaningfully to the field.
+            </p>
         </div>
     </div>
+    <div class="project-section">
+        <div class="project-content">
+            <h2>Contact Me!</h2>
+            <form id="contact-form">
+                <input type="email" id="email" name="email" placeholder="Your email" required><br>
+                <textarea id="message" name="message" placeholder="Your message" required></textarea><br>
+                <button type="submit">Send</button>
+            </form>
+            <div id="confirmation" style="display:none;">Thank you for your message!</div>
+        </div>
+    </div>
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function (event) {
+            event.preventDefault();
+            emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+                .then(function () {
+                    console.log('SUCCESS!');
+                    document.getElementById('confirmation').style.display = 'block';
+                }, function (error) {
+                    console.log('FAILED...', error);
+                });
+        });
+    </script>
 
 </body>
 
